@@ -28,7 +28,7 @@ public class Main {
             todoCollection.updateOne(
                     new Document("_id", new ObjectId("6294e6108b613d76ee74b59b")),
                 new Document(Map.of(
-                        "$set", new Document("done", true),
+                        "$set", new Document("done", false),
                         "$currentDate", new Document("dateDone", true),
                         "$unset", new Document("dateCreated", true)
                 ))
