@@ -15,7 +15,7 @@ public class Main {
 
             var todoCollection = database.getCollection("todo");
 
-            todoCollection.find(new Document("task", new Document("$regex", "coffee")))
+            todoCollection.find(new Document("some change", new Document("$regex", "coffee")))
                     .forEach((Consumer<Document>) System.out::println);
 
             todoCollection.insertOne(new Document(Map.of(
